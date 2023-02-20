@@ -8,7 +8,8 @@ export default function useClientes() {
     const repo: ClienteRepositorio = new ColecaoCliente()
 
     const {
-        tabelaVisivel,  
+        tabelaVisivel,
+        formularioVisivel,  
         exibirFormulario, 
         exibirTabela
     } = useTabelaOuForm()
@@ -27,7 +28,7 @@ export default function useClientes() {
 
     function selecionarCliente(cliente: Cliente) {
         setCliente(cliente)
-        exibirFormulario
+        exibirFormulario()
     }
 
     async function excluirCliente(cliente: Cliente) {
@@ -42,7 +43,7 @@ export default function useClientes() {
 
     function novoCliente() {
         setCliente(Cliente.vazio())
-        exibirFormulario
+        exibirFormulario()
     }
 
     return {
@@ -54,6 +55,8 @@ export default function useClientes() {
         cliente,
         clientes,
         tabelaVisivel,
+        formularioVisivel,
         exibirTabela,
+        exibirFormulario
     }
 }

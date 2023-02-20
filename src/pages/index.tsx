@@ -14,8 +14,7 @@ export default function Home() {
     clientes, 
     novoCliente, 
     selecionarCliente, 
-    salvarCliente, 
-    obterTodos, 
+    salvarCliente,  
     excluirCliente,
     tabelaVisivel,
     exibirTabela,
@@ -32,10 +31,10 @@ export default function Home() {
                 <>
                   <div className='flex justify-end'>
                     <Botao 
-                    onClick={novoCliente} 
-                    cor='green' 
-                    className="mb-4">
-                      Novo Cliente
+                      onClick={novoCliente} 
+                      cor='green' 
+                      className="mb-4">
+                        Novo Cliente
                     </Botao>
                   </div>
                   <Tabela clientes={clientes} 
